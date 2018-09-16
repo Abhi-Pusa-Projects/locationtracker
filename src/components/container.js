@@ -23,13 +23,13 @@ export class MapContainer extends Component {
   }
 
   componentWillMount(){
-    //console.log("component will mount method is getting called");
+    console.log("component will mount method is getting called");
     //this.getLocation();
     setInterval(() => this.getLocation(), 1000);
   }
 
   getLocation() {
-    //console.log("getLocation method is called after each second");
+    console.log("getLocation method is called after each second");
       if (navigator.geolocation) {
           navigator.geolocation.getCurrentPosition(this.showPosition);
       } else {
@@ -37,7 +37,7 @@ export class MapContainer extends Component {
       }
   }
   showPosition(position) {
-      //console.log("show map method is called",position.coords.latitude,position.coords.longitude);
+      console.log("show map method is called",position.coords.latitude,position.coords.longitude);
       this.setState({latitude:position.coords.latitude,longitude:position.coords.longitude});
   }
 
@@ -50,7 +50,7 @@ export class MapContainer extends Component {
     // ];
     return(
       <div>
-      <div style={{margin:"auto",testAlign:"center",width:"800px",height:"600px",overflow:"hidden",position:"relative"}}>
+      <div style={{margin:"auto",testAlign:"center",width:"100%",height:"600px",overflow:"hidden",position:"relative"}}>
         <Map google={this.props.google}
             style={{width: '100%', height: '100%', position: 'relative'}}
             initialCenter={{
