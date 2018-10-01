@@ -63,7 +63,7 @@ export class MapContainer extends Component {
             title={'The marker`s title will appear as a tooltip.'}
             name={'SOMA'}
             icon={{
-              url: "/icon.jpg",
+              url: "/js/icon.jpg",
               anchor: new window.google.maps.Point(10,10),
               scaledSize: new window.google.maps.Size(64,64)
             }} 

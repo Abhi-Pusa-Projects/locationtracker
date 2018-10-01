@@ -1,16 +1,19 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.less';
 import Header from './components/header';
 import Footer from './components/footer';
 import Content from './components/content';
+import VideoCapture from './components/videocapture';
+import ChatApp from './components/chatModule';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <Header/>
-        <Content/>
+        {/* <Content/> */}
+        {/* <VideoCapture /> */}
+        <ChatApp />
         <Footer/>
       </div>
     );
